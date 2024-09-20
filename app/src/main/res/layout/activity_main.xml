@@ -7,13 +7,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Botones para las funciones -->
+    <Button
+        android:id="@+id/btn_create_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Usuario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_list_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Listar Usuarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_user" />
+
+    <Button
+        android:id="@+id/btn_create_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Producto"
+        app:layout_constraintTop_toBottomOf="@id/btn_list_users"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_list_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listar Productos"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- El RecyclerView existente, pero ajustado para que esté debajo de los botones -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_list_products"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
